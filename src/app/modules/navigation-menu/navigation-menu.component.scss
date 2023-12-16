@@ -1,0 +1,14 @@
+@import 'common';
+
+.nav-container {
+    height: 100%;
+}
+
+:host {
+    ::ng-deep {
+        .mdc-list-item__primary-text,
+        .mdc-list-item--activated .mdc-list-item__primary-text {
+            color: white !important;
+        }
+    }
+}

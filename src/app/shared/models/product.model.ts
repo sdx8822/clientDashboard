@@ -22,6 +22,7 @@ export class ProductModel implements IProductInterface {
 
     productId: number;
     quantity: number;
+    isSelected: boolean;
 }
 
 export interface IProductInterface {

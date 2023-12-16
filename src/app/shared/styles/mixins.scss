@@ -1,0 +1,3 @@
+@mixin background-color($background-color: var(--color-primary)) {
+    background-color: $background-color;
+}

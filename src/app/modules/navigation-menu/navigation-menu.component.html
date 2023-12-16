@@ -1,0 +1,24 @@
+<mat-toolbar class="bg-primary text-white">
+    <button mat-icon-button
+            class="hamburger-menu-icon"
+            aria-label="Sidenav toggle icon"
+            (click)="isSideNavOpen = !isSideNavOpen">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <span>Fake Store</span>
+
+</mat-toolbar>
+
+<mat-sidenav-container class="h-full">
+    <mat-sidenav [(opened)]="isSideNavOpen" mode="side" class="nav-container bg-primary-light">
+        <mat-nav-list>
+            <mat-list-item *ngFor="let nav of NAVIGATION_LINKS" [routerLink]="nav.link" [activated]="nav.isActive"
+                (click)="setActivePage(nav)">
+                {{ nav.label }}
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content><router-outlet></router-outlet></mat-sidenav-content>
+</mat-sidenav-container>

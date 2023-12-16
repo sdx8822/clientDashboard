@@ -1,0 +1,15 @@
+@import 'mixins';
+@import 'variables';
+
+.bg-primary {
+    @include background-color();
+}
+.bg-primary-light {
+    @include background-color($color-primary-light);
+}
+.bg-accent {
+    @include background-color($color-accent);
+}
+.bg-warn {
+    @include background-color($color-warn);
+}
